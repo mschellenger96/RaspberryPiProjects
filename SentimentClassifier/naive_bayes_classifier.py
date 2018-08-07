@@ -2,11 +2,15 @@ from sklearn.naive_bayes import GaussianNB
 import numpy as np 
 import matplotlib.pyplot as plt 
 
+import warnings
+
+
 in_file = 'data_multivar.txt'
 
 a = []
 b = []
 
+warnings.filterwarnings("ignore")
 with open(in_file, 'r') as file:
 	for line in file.readlines():
 		data = [float(x) for x in line.split(',')]
